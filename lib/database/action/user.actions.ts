@@ -2,11 +2,12 @@
 
 import { hundleError } from "@/lib/utils";
 import { CreateUserParams } from "@/types";
-import { connectToDatabase } from "..";
+
 import User from "../models/user.model";
 import Event from "../models/event.model";
 import Order from "../models/event.model";
 import { revalidatePath } from "next/cache";
+import { connectToDatabase } from "..";
 
 // 新規登録
 export const createUser = async (user: CreateUserParams) => {
